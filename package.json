@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "check": "astro check",
     "astro": "astro",
-    "deploy": "bun run build && bunx wrangler deploy"
+    "deploy": "bun run build && bunx wrangler pages deploy dist"
   },
   "dependencies": {
     "astro": "^5.17.1",
