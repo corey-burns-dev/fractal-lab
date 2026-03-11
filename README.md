@@ -1,65 +1,30 @@
-# fractal-lab
+# Fractal Lab
 
-A realtime fractal art playground built with Astro and Three.js.
+Fractal Lab is a realtime fractal playground built with Astro and Three.js. It focuses on interactive shader-driven visuals with live tuning controls.
 
 ## Highlights
 
-- 11 signed-distance fractal modes (Mandelbulb, Mandelbox, Julia 3D, and more)
-- Ray-marched shader with improved lighting, ambient occlusion, soft shadows, and fog
-- Post-processing pipeline (ACES tone mapping, bloom, chromatic aberration, vignette)
-- Live controls for scale, iterations, morphing, bloom, glow, and render quality
-- Adaptive quality mode that tunes trace budget/pixel density for smoother frame times
-- Responsive UI that works on desktop and mobile
+- Multiple signed-distance fractal modes
+- Ray-marched shader pipeline with bloom, fog, and post-processing
+- Live controls for iterations, scale, morphing, and quality
+- Responsive UI for desktop and mobile exploration
 
-## Tech Stack
+## Stack
 
-- Astro 5
+- Astro
 - Three.js
-- GLSL fragment shader raymarching
+- GLSL
 
-## Quick Start
+## Quick start
 
 ```bash
-npm install
-npm run dev
+bun install
+bun run dev
 ```
 
-Open `http://localhost:4321`.
+Build and preview:
 
-## Available Scripts
-
-- `npm run dev`: Start local development server
-- `npm run build`: Build for production
-- `npm run preview`: Preview production build
-- `npm run check`: Run Astro project checks
-
-## Controls
-
-- Left panel: choose fractal type
-- Right panel: tune fractal and render parameters
-- Mouse/touch drag: orbit camera
-- Scroll/pinch: zoom
-
-## Optimization Notes
-
-- Rendering uses adaptive trace budget and capped pixel ratio scaling
-- Auto-quality watches recent frame times and adjusts quality dynamically
-- Camera distance per fractal is preset to reduce clipping and improve framing
-
-## Project Structure
-
-```text
-.
-├── public/
-├── src/
-│   ├── components/
-│   │   └── Mandelbulb.astro
-│   └── pages/
-│       └── index.astro
-├── astro.config.mjs
-└── package.json
+```bash
+bun run build
+bun run preview
 ```
-
-## License
-
-MIT
